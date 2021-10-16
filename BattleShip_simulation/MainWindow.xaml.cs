@@ -18,6 +18,7 @@ namespace BattleShip_simulation
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    /// check changes
     public partial class MainWindow : Window
     {
         public MainWindow()
