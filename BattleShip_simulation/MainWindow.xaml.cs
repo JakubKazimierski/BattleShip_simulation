@@ -25,5 +25,32 @@ namespace BattleShip_simulation
         {
             InitializeComponent();
         }
+        private async void GameStart_Click(object sender, RoutedEventArgs e)
+        {
+            ;
+
+        }
+        private void PlayerAndGraficsSetting()
+        {
+            ;
+        }
+        private void ShowBoards()
+        {
+            ;
+        }
+        private async Task Game()
+        {
+            ;
+
+        }
+        private void Options_Click(object sender, RoutedEventArgs e)
+        {
+            ;
+        }
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            ;
+        }
+
     }
 }
