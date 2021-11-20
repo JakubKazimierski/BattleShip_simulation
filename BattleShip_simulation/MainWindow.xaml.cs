@@ -19,7 +19,13 @@ namespace BattleShip_simulation
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     /// check changes
-    public partial class MainWindow : Window
+    static class GameSettings
+    {
+        internal static Options GameOptions = new Options();
+        internal static int size = GameOptions.SizeChange();
+    }
+
+public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -45,11 +51,18 @@ namespace BattleShip_simulation
         }
         private void Options_Click(object sender, RoutedEventArgs e)
         {
-            ;
+            try
+            {
+                GameSettings.GameOptions.Show();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            ;
+            Application.Current.Shutdown();
         }
 
     }
