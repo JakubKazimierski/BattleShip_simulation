@@ -2,6 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4ECC708C-ECD7-4D70-A4E7-9ACBB721971E}</ProjectGuid>
@@ -55,6 +56,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AllDatas.cs" />
+    <Compile Include="AmountOfShips.cs" />
+    <Compile Include="BattleBegin.cs" />
+    <Compile Include="CheckingSpace.cs" />
+    <Compile Include="CreateShips.cs" />
+    <Compile Include="GameBegin.cs" />
+    <Compile Include="GameBoard.cs" />
+    <Compile Include="GettingPositionsOfShips.cs" />
+    <Compile Include="IBoard.cs" />
+    <Compile Include="IsConflicts.cs" />
+    <Compile Include="IsEnoughSpace.cs" />
+    <Compile Include="IsShipPlacedCorr.cs" />
+    <Compile Include="IsWin.cs" />
+    <Compile Include="RandomPlace.cs" />
+    <Compile Include="RandomPlaces.cs" />
+    <Compile Include="ShipLayout.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +109,7 @@
     <Compile Include="Player2.xaml.cs">
       <DependentUpon>Player2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlayerChoose.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
