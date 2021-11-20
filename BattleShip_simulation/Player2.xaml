@@ -6,28 +6,52 @@
       xmlns:local="clr-namespace:BattleShip_simulation"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-        Title="Player1" Height="450" Width="800" ResizeMode="NoResize" Background="Gray">
+      Title="Player2" Height="450" Width="800" ResizeMode="NoResize" Background="Transparent">
+    
+    <Border BorderBrush="Wheat" BorderThickness="3" CornerRadius="52">
 
-    <Grid>
-        <Canvas Margin="194,46,139,98" x:Name="Board">
-            <TextBlock Canvas.Left="472" Canvas.Top="44" Text="Wynik ostrzału: " TextWrapping="Wrap"/>
-            <TextBlock x:Name="Result1" Canvas.Left="488" Canvas.Top="65" Text="" TextWrapping="Wrap" Width="52"/>
-            <Ellipse Height="124" Canvas.Left="456" Stroke="Black" Canvas.Top="-19" Width="111" RenderTransformOrigin="0.5,0.5">
-                <Ellipse.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="1.1"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Ellipse.RenderTransform>
-            </Ellipse>
-            <TextBlock Canvas.Left="154" Canvas.Top="323" TextWrapping="Wrap"><Run Language="pl-pl" Text="Aktualna czynność"/></TextBlock>
-        </Canvas>
-        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="Gracz1" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="667,46,0,0" Text="Ilość trafień" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Text1" HorizontalAlignment="Left" Margin="678,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.608,0.525"/>
-        <TextBlock HorizontalAlignment="Center" Background="DarkViolet" x:Name="Player1Info" Margin="0,393,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-    </Grid>
+        <Border BorderThickness="20" CornerRadius="35">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Teal" Offset="0.0"/>
+                    <GradientStop Color="DarkBlue" Offset="0.5"/>
+                    <GradientStop Color="DarkGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid>
+
+
+
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Teal" Offset="0.0"/>
+                        <GradientStop Color="DarkBlue" Offset="0.5"/>
+                        <GradientStop Color="DarkGreen" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                
+                <Canvas Margin="194,46,139,98" x:Name="Board">
+                    <TextBlock Canvas.Left="472" Canvas.Top="44" Text="HIT: " TextWrapping="Wrap"  FontFamily="Stencil" Foreground="White"/>
+                    <TextBlock x:Name="Result2" Canvas.Left="488" Canvas.Top="65" Text="" TextWrapping="Wrap" Width="52" FontFamily="Stencil" Foreground="White"/>
+                    <Ellipse Height="124" Canvas.Left="456" Stroke="White" Canvas.Top="-19" Width="111" RenderTransformOrigin="0.5,0.5">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="1.1"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <TextBlock Canvas.Left="154" Canvas.Top="323" TextWrapping="Wrap" FontFamily="Stencil" Foreground="White"><Run Language="pl-pl" Text="Currently"/></TextBlock>
+                </Canvas>
+                <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="Player2" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="667,46,0,0" Text="Score:" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Stencil"/>
+                <TextBlock x:Name="Text2" HorizontalAlignment="Left" Margin="678,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.608,0.525" Foreground="White" FontFamily="Stencil"/>
+                <TextBlock HorizontalAlignment="Center" Background="DarkViolet" x:Name="Player2Info" Margin="0,393,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            </Grid>
+        </Border>
+    </Border>
 </Window>

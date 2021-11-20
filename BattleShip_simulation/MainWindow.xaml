@@ -5,13 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BattleShip_simulation"
         mc:Ignorable="d"
-        Title="Menu" Height="400" Width="400" Background="Gray" ResizeMode="NoResize">
-    <Grid>
-        <Button Content="Start" x:Name="GameStart" Click="GameStart_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,248,0,0" Width="108"/>
-        <Button Content="Opcje" HorizontalAlignment="Center" x:Name="Options" Click="Options_Click" Margin="0,273,0,0" VerticalAlignment="Top" Width="108"/>
-        <Button Content="Wyjście" x:Name="ExitButton" Click="ExitButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Width="108" Margin="0,298,0,0"/>
-        <Image x:Name="Pic1" Source="ExamplePhoto/BattleShipsPic.jpg" HorizontalAlignment="Left" Height="162" Margin="116,38,0,0" VerticalAlignment="Top" Width="181">
-        </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="174,17,0,0" Text="BattleShips" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-    </Grid>
+        Title="Menu"
+
+        AllowsTransparency="True"
+        Background="Transparent" 
+        ResizeMode="NoResize"
+        WindowStyle = "None"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Border BorderBrush="Wheat" BorderThickness="10" CornerRadius="52">
+
+        <Border BorderThickness="20" CornerRadius="35">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Teal" Offset="0.0"/>
+                    <GradientStop Color="DarkBlue" Offset="0.5"/>
+                    <GradientStop Color="DarkGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+
+
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Teal" Offset="0.0"/>
+                        <GradientStop Color="DarkBlue" Offset="0.5"/>
+                        <GradientStop Color="DarkGreen" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                
+               <TextBlock Margin="259,24,265,0" Text="BattleShips" TextWrapping="Wrap" Width="184" TextAlignment="Center" FontWeight="Bold" FontSize="22" FontFamily="Stencil" Foreground="White"/>
+
+
+
+                <Image x:Name="Pic1" Source="ExamplePhoto/1-ship-png-image.png" Margin="259,82,268,157" />
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+                    <Button Content="START" x:Name="GameStart" Click="GameStart_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,248,0,0" Width="108" Background="{x:Null}" Foreground="White" FontFamily="Stencil" FontSize="20" />
+                    <Button Content="OPTIONS" HorizontalAlignment="Center" x:Name="Options" Click="Options_Click" Margin="0,273,0,0" VerticalAlignment="Top" Width="108" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Stencil"/>
+                    <Button Content="EXIT" x:Name="ExitButton" Click="ExitButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Width="108" Margin="0,298,0,0" Background="{x:Null}" Foreground="White" FontSize="20" FontFamily="Stencil"/>
+                </Grid>
+
+
+            </Grid>
+        </Border>
+    </Border>
+
 </Window>
