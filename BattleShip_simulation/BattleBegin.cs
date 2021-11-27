@@ -19,7 +19,7 @@ namespace BattleShip_simulation
                     return IsStrike;
                 }
 
-            return string.Empty;
+            return "missed" + IsStrike;
         }
     }
 }
