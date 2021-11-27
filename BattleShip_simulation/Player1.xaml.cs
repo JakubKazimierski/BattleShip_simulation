@@ -124,8 +124,7 @@ namespace BattleShip_simulation
 
             var GettingResult = battle.begin(all.ShipPlaces);
 
-            if (GettingResult
-            != string.Empty)
+            if (!GettingResult.Contains("missed"))
                 Dispatcher.Invoke(new Action(() =>
                 {
                     Rectangle tb = (Rectangle)FindName(GettingResult);
@@ -139,7 +138,7 @@ namespace BattleShip_simulation
             else
                 Dispatcher.Invoke(new Action(() =>
                 {
-                    Rectangle tb = (Rectangle)FindName(GettingResult);
+                    Rectangle tb = (Rectangle)FindName(GettingResult.Replace("missed"));
                     tb.Fill = new SolidColorBrush(Colors.Red);
                     GameSettings.IsHit[0] = all.PlayerBehavior[3];
                     Result1.Foreground = new SolidColorBrush(Colors.Red);
