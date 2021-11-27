@@ -129,7 +129,7 @@ namespace BattleShip_simulation
                 Dispatcher.Invoke(new Action(() =>
                 {
                     Rectangle tb = (Rectangle)FindName(GettingResult);
-                    tb.Fill = new SolidColorBrush(Colors.Red);
+                    tb.Fill = new SolidColorBrush(Colors.Green);
                     all.Strikes.Add(GettingResult);
                     GameSettings.IsHit[0] = all.PlayerBehavior[4];
                     Result1.Foreground = new SolidColorBrush(Colors.Green);
@@ -139,6 +139,8 @@ namespace BattleShip_simulation
             else
                 Dispatcher.Invoke(new Action(() =>
                 {
+                    Rectangle tb = (Rectangle)FindName(GettingResult);
+                    tb.Fill = new SolidColorBrush(Colors.Red);
                     GameSettings.IsHit[0] = all.PlayerBehavior[3];
                     Result1.Foreground = new SolidColorBrush(Colors.Red);
                     Result1.Text = GameSettings.IsHit[1];
